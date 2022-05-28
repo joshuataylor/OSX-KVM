@@ -35,7 +35,7 @@ OVMF_DIR="."
 
 # shellcheck disable=SC2054
 args=(
-  -enable-kvm -m "$ALLOCATED_RAM" -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,"$MY_OPTIONS"
+  -enable-kvm -m "$ALLOCATED_RAM" -cpu Penryn,kvm=on,vendor=Apple,+invtsc,vmware-cpuid-freq=on,"$MY_OPTIONS"
   -machine q35
   -usb -device usb-kbd -device usb-tablet -device usb-mouse
   -smp "$CPU_THREADS",cores="$CPU_CORES",sockets="$CPU_SOCKETS"
