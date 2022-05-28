@@ -72,4 +72,4 @@ args=(
   -vnc 0.0.0.0:1,password -k en-us
 )
 
-qemu-system-x86_64 "${args[@]}"
+qemu-system-aarch64 "${args[@]}"

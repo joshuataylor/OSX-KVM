@@ -67,4 +67,4 @@ args=(
   -display none
 )
 
-qemu-system-x86_64 "${args[@]}"
+qemu-system-aarch64 "${args[@]}"

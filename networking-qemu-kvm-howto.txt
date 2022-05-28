@@ -10,7 +10,7 @@ slowest and is not visible via the outside network, but requires no host-side
 setup, so it's perfect if you just want internet but don't care about latency
 or about connecting to the VM from an external source.
 
-In order to do this, change the line in your qemu-system-x86_64 command (found
+In order to do this, change the line in your qemu-system-aarch64 command (found
 in boot-macOS.sh) to the following:
 
 -netdev user,id=net0 -device network_adapter,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
@@ -60,7 +60,7 @@ virsh net-start default
 virsh net-autostart default
 
 Add "-netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \"
-to your qemu-system-x86_64 command.
+to your qemu-system-aarch64 command.
 
 QEMU networking tip
 -------------------

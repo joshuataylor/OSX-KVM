@@ -20,8 +20,8 @@ if [ "$v" != "Y" ]; then
 fi
 
 echo -e "\n== Installed Binaries ==" >&2
-if [ -x "$(command -v qemu-system-x86_64)" ]; then
-	qemu-system-x86_64 --version
+if [ -x "$(command -v qemu-system-aarch64)" ]; then
+	qemu-system-aarch64 --version
 else
 	echo -e "qemu is not installed." >&2
 fi

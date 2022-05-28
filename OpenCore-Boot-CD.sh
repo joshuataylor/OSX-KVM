@@ -54,4 +54,4 @@ args=(
   -device VGA,vgamem_mb=128
 )
 
-qemu-system-x86_64 "${args[@]}"
+qemu-system-aarch64 "${args[@]}"

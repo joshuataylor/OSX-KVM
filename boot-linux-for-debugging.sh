@@ -27,7 +27,7 @@ REPO_PATH="."
 OVMF_DIR="."
 
 # This causes high cpu usage on the *host* side
-# qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,vendor=Apple,+invtsc,vmware-cpuid-freq=on,hypervisor=off,vmx=on,kvm=off,$MY_OPTIONS\
+# qemu-system-aarch64 -enable-kvm -m 3072 -cpu Penryn,vendor=Apple,+invtsc,vmware-cpuid-freq=on,hypervisor=off,vmx=on,kvm=off,$MY_OPTIONS\
 
 # shellcheck disable=SC2054
 args=(
@@ -57,4 +57,4 @@ args=(
   -device VGA,vgamem_mb=128
 )
 
-qemu-system-x86_64 "${args[@]}"
+qemu-system-aarch64 "${args[@]}"

@@ -319,8 +319,8 @@ index 5948b8a..3acc123 100755
  # Use "-device usb-tablet" instead of "-device usb-mouse" for better mouse
  # behaviour. This requires QEMU >= 2.9.0.
 
--qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,kvm=off,vendor=Apple \
-+qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,kvm=off,vendor=Apple,+aes \
+-qemu-system-aarch64 -enable-kvm -m 3072 -cpu Penryn,kvm=off,vendor=Apple \
++qemu-system-aarch64 -enable-kvm -m 3072 -cpu Penryn,kvm=off,vendor=Apple,+aes \
           -machine pc-q35-2.4 \
           -smp 4,cores=2 \
           -usb -device usb-kbd -device usb-mouse \
